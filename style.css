@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: block;
+    height: 100vh;
+    font-family: "Be Vietnam Pro", sans-serif;
+  }
+
+  header {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #E5E7EB;
+    background-image: url(resources/bg-pattern.png);
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #4D556233;
+    padding-block: 52px;
+  }
+
+  header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  header p {
+    width: 500px;
+    color: #4D5562;
+    margin: 0 auto;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
+    grid-template-areas: 
+        ". free-price team-price popular-price enterprise-price"
+        "offer free-section team-section popular-section enterprise-section"
+        ". free-footer team-footer popular-footer enterprise-footer";
+        
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .price h3 {
+    color: #263FA9;
+    padding: 1.5rem 0 0.75rem 0;
+  }
+
+  .price h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    padding-bottom: 6px;
+  }
+
+  .price p {
+    color: #4D5562;
+    padding-bottom: 48px;
+  }
+
+
+  .offer ul li {
+    font-weight: 600;
+    padding: 1rem 0 1rem 0.75rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    padding-block: 1rem;
+    border-bottom: 1px solid #4D556233;
+  }
+
+  img {
+    width: 15px;
+  }
+
+  .offer {
+    grid-area: offer;
+    text-align: left;
+    background-color: #F8FAFC;
+    border-radius: 15px 0 0 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .free-price {
+    grid-area: free-price;
+  }
+
+  .free-section {
+    grid-area: free-section;
+  }
+
+  .free-footer {
+    grid-area: free-footer;
+  }
+
+  .team-price {
+    grid-area: team-price;
+  }
+
+  .team-section {
+    grid-area: team-section;
+  }
+
+  .team-footer {
+    grid-area: team-footer;
+  }
+
+  .popular-price {
+    grid-area: popular-price;
+    background-color: #121826;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .popular-price h3 {
+    margin: 0 auto;
+    background-color: #263FA9;
+    border-radius: 20px;
+    height: fit-content;
+    width: fit-content;
+    padding: 1px 15px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .popular-price h3,
+  .popular-price h2,
+  .popular-price p,
+  .popular-section ul li,
+  .popular-footer p {
+    color: #FFFFFF !important;
+  }
+
+  .popular-section {
+    grid-area: popular-section;
+    background-color: #121826;
+  }
+
+  .popular-footer {
+    grid-area: popular-footer;
+    background-color: #7C4F1E;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .enterprise-price {
+    grid-area: enterprise-price;
+  }
+
+  .enterprise-section {
+    grid-area: enterprise-section;
+  }
+
+  .enterprise-footer {
+    grid-area: enterprise-footer;
+  }
+
+  .flex-footer {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-block: 1rem;
+  }
+
+  .flex-footer p {
+    color: #263FA9;
+    font-weight: 600;
+  }
+
+  .author-info {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 16px;
+    color: rgb(55, 65, 81);
+  }
+
+  .author-info a {
+    text-decoration: none;
+  }
