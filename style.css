@@ -43,12 +43,13 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(100px, 1fr));
-    grid-template-areas: 
-        ". free-price team-price popular-price enterprise-price"
-        "offer free-section team-section popular-section enterprise-section"
-        ". free-footer team-footer popular-footer enterprise-footer";
-        
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-areas:
+      ". enterprise-price  popular-price"
+      "offer enterprise-section popular-section"
+      ". enterprise-footer popular-footer";
+    padding-inline: 1rem;
+    padding-bottom: 1rem;
   }
 
   .text-center {
@@ -95,8 +96,15 @@
     text-align: left;
     background-color: #F8FAFC;
     border-radius: 15px 0 0 15px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: clip;
+  }
+
+  .offer li {
+    padding-left: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
   }
 
   .free-price {
@@ -182,6 +190,47 @@
     color: #263FA9;
     font-weight: 600;
   }
+
+  .free-price,
+  .free-section,
+  .free-footer,
+  .team-price,
+  .team-section,
+  .team-footer {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-areas: 
+        ". team-price popular-price enterprise-price"
+        "offer team-section popular-section enterprise-section"
+        ". team-footer popular-footer enterprise-footer";      
+  }
+  .team-price,
+  .team-section,
+  .team-footer {
+    display: block;
+  }
+}
+  
+@media (min-width: 1280px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
+    grid-template-areas: 
+        ". free-price team-price popular-price enterprise-price"
+        "offer free-section team-section popular-section enterprise-section"
+        ". free-footer team-footer popular-footer enterprise-footer";      
+  }
+  .free-price,
+  .free-section,
+  .free-footer{
+  display: block;
+}
+ }
 
   .author-info {
     font-size: 14px;
